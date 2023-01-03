@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SqlTimestampTest {
     @BeforeEach
     public void setUp() throws Exception {
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Shanghai"));
+        Locale.setDefault(Locale.US);
+
         JSON.defaultTimeZone = TimeZone.getDefault();
         JSON.defaultLocale = Locale.getDefault();
     }
